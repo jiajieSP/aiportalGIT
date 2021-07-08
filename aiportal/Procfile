@@ -1,0 +1,1 @@
+web: aiportal.wsgi --log-file -
