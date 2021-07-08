@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+
+{% block title%}Search Model Results{%endblock%}
+
+{% block content%}
+
+<center>
+    {% if searched %}
+        <h1>You searched for {{searched}}</h1>
+        <br>
+        {%for i in m%}
+        <a href="{% url 'modelResult' i.id %}">{{i.modelName}} | {{i.modelText}} | {{i.modelDate}} </a><br>
+        {%endfor%}
+    {% else %}
+        <h1>Hey! You did not search for a model!</h1>
+    {%endif%}
+
+</center>
+
+{%endblock%}
