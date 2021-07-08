@@ -26,7 +26,7 @@ def createModel(response):
             t = Search(modelName = n)
             t.save()
 
-        return HttpResponseRedirect("/search/%i" %t.id)
+        return HttpResponseRedirect("/search/modelResult/%i" %t.id)
     else:
         form = CreateNewModel()
     return render(response,"search/createModel.html", {"form":form})
