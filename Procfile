@@ -1,1 +1,1 @@
-web: aiportal.wsgi --log-file -
+web: gunicorn aiportal.wsgi
